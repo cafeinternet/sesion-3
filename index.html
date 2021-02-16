@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- script de aframe -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <!-- scrips de los ambientes -->
+    <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+
+</head>
+<body>
+    <a-scene >
+        <!-- Ambiente -->
+        <!-- <a-entity  environment="preset: poison; groundColor: #071cfa; skyType: gradient; skyColor:#f705ef; fog:0.5"></a-entity> -->
+         
+        <a-assets>
+            <video id="video" autoplay loop="true" src="./practica3.mp4"></video>
+            <img id="xyz" src="./xyz.png">
+            <a-asset-item id="perrito" src="./perrito-textura.gltf"></a-asset-item>
+            <a-asset-item id="calavera" src="./calavera.gltf"></a-asset-item>
+            <a-asset-item id="calavera-2" src="./calavera.gltf"></a-asset-item>
+            <a-asset-item id="dini1" src="./dini1.gltf"></a-asset-item>
+
+
+
+
+          </a-assets>
+
+          <!-- <a-entity gltf-model="#perrito" position="2 0 2"></a-entity> -->
+          <a-entity gltf-model="#calavera" position="2 0 2" scale="3 3 3"></a-entity>
+          <a-entity gltf-model="#calavera-2" position="3 0 2" scale="3 3 3"></a-entity>
+
+          <a-entity gltf-model="#dini1" position="9 0 2"  animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
+
+
+          
+
+          <a-video src="#video" width="16" height="9" position="0 5 -20"></a-video>
+
+        <!-- etiqueta para precargar los recursos -->
+        <!-- <a-sound src="src: url(./sonido.mp3)" autoplay="true" loop="true" volume="2" position="0 2 5"></a-sound> -->
+
+
+<a-image  src="#xyz"  material="side:double; alphaTest: 0.5 " scale="2 2 2" position="-2.435 1 0.3" ></a-image>
+        
+        <!-- animacion de la camara -->
+
+
+        <!-- <a-light  position="4.80487 5 12.2549" light="type: spot; color: #b3ff00; " rotation="-19.17 -0.56 0"></a-light> -->
+
+    </a-scene>
+</body>
+</html>
